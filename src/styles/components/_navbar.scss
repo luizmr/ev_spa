@@ -1,0 +1,25 @@
+.navbar {
+	margin-bottom: 34px;
+	display: grid;
+	grid-template-columns: 354px 1fr 354px;
+	justify-content: space-between;
+	align-items: center;
+
+	.navbar__menu-button {
+		display: none;
+
+		svg {
+			color: $black;
+		}
+	}
+}
+
+@media screen and (max-width: $mobile-1) {
+	.navbar {
+		grid-template-columns: 1fr 50px;
+		margin-bottom: 24px;
+		.navbar__menu-button {
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,136 @@
+.product-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-sizing: border-box;
+	max-width: 288px;
+	padding: 16px 16px 20px 16px;
+	position: relative;
+	border: 1px solid $primary-border-color;
+	border-radius: 4px;
+
+	.product-card__top,
+	.product-card__bottom {
+		width: 100%;
+	}
+
+	.product-card__bottom {
+		.added-button {
+			padding: 8px 34px !important;
+			pointer-events: none;
+			display: grid;
+			grid-template-columns: 32px 50px 32px;
+			justify-content: center;
+			align-items: center;
+			p {
+				text-transform: none;
+				font-weight: 500;
+				margin: 0;
+				color: #141414;
+				text-align: center;
+			}
+			svg {
+				color: $check-color;
+			}
+		}
+
+		.disabled-button {
+			p {
+				color: $secondary-text-color;
+			}
+		}
+	}
+
+	img {
+		object-fit: contain;
+		max-width: 100%;
+	}
+
+	.product-card__summary {
+		color: $primary-text-color;
+		font-size: 1rem;
+	}
+
+	.product-card__stars {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		margin: 16px 0;
+
+		svg {
+			color: $star-color;
+			font-size: 18px;
+		}
+
+		p {
+			margin: 0 0 0 5px;
+			color: $fourth-text-color;
+			font-weight: 500;
+			font-size: 14px;
+		}
+	}
+
+	.product-card__quantity {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 18px;
+
+		p {
+			font-size: 1.5rem;
+			font-weight: 700;
+			color: $primary-text-color;
+		}
+
+		.MuiFormControl-root {
+			.MuiSelect-select {
+				font-weight: 400;
+				color: $primary-text-color;
+			}
+		}
+	}
+
+	button {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: $mobile-1) {
+	.product-card {
+		max-width: 175px;
+		padding: 8px 8px 15px 8px;
+		border-color: $third-border-color;
+
+		.product-card__summary {
+			font-size: 0.9rem;
+		}
+
+		.product-card__stars {
+			margin: 8px 0;
+		}
+
+		.product-card__quantity {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 16px;
+
+			p {
+				font-size: 1rem;
+			}
+
+			.MuiFormControl-root {
+				margin: 0;
+				min-width: 70px !important;
+
+				.MuiOutlinedInput-notchedOutline {
+					border: none;
+				}
+			}
+		}
+
+		button {
+			border-color: $third-border-color;
+		}
+	}
+}

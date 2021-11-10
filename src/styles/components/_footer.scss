@@ -1,0 +1,19 @@
+.footer {
+	display: none;
+	position: sticky;
+	bottom: 0px;
+	padding: 12px 2px;
+	border-top: 1px solid $third-border-color;
+	background-color: $white;
+	margin-top: 20px;
+	button {
+		width: 100%;
+		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: $mobile-1) {
+	.footer {
+		display: block;
+	}
+}

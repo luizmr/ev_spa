@@ -1,0 +1,72 @@
+.cart-section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.language-select {
+	.MuiFormControl-root {
+		margin: 0;
+		.MuiSelect-select {
+			color: $black;
+			font-weight: 500;
+			font-size: 14px;
+			font-family: 'Inter', sans-serif;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+}
+
+.cart-button {
+	button {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: $primary-button-color;
+		padding: 12px 24px;
+		border: none;
+
+		.MuiBadge-root {
+			svg {
+				color: $white;
+			}
+
+			span {
+				background-color: #f44336;
+			}
+		}
+
+		p {
+			margin: 0 0 0 20px;
+			color: $white;
+			text-transform: none;
+			font-weight: 600;
+			font-size: 1rem;
+		}
+
+		.cart-button__third-element {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: $mobile-1) {
+	.cart-section {
+		display: none;
+	}
+
+	.cart-button {
+		margin-left: 0;
+		button {
+			p {
+				margin: 0;
+			}
+
+			.cart-button__third-element {
+				display: block;
+				width: 24px;
+			}
+		}
+	}
+}

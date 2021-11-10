@@ -1,0 +1,91 @@
+.filter-desktop {
+	padding: 16px 24px;
+	background-color: $secondary-bg-color;
+	display: grid;
+	grid-template-columns: 156px 1fr 156px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.filter-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.MuiFormControl-root {
+		height: 36px;
+		margin: 0 8px 0;
+	}
+
+	.MuiFormControl-root:nth-child(1),
+	.MuiFormControl-root:nth-child(2) {
+		max-width: 112px;
+	}
+}
+
+.filter-button {
+	padding: 8px 34px !important;
+	p {
+		text-transform: none;
+		font-weight: 500;
+		color: $primary-button-color;
+		margin: 0;
+		font-size: 14px;
+	}
+}
+
+.filter-select-component {
+	.MuiFormControl-root:last-child {
+		.MuiOutlinedInput-notchedOutline {
+			border-color: $secondary-border-color;
+		}
+
+		label {
+			text-transform: uppercase;
+			font-size: 0.9rem;
+			top: 2px;
+			letter-spacing: 1px;
+			background-color: $secondary-bg-color;
+			padding-right: 5px;
+			color: $third-text-color;
+			border-radius: 10px;
+			font-weight: 500;
+		}
+
+		.MuiSelect-select {
+			color: $primary-text-color;
+		}
+	}
+
+	.MuiFormControl-root {
+		.MuiSelect-select {
+			font-size: 14px;
+			font-weight: 500;
+		}
+	}
+}
+
+@media screen and (max-width: $mobile-1) {
+	.filter-desktop {
+		display: none;
+
+		.filter-section {
+			display: none !important;
+		}
+	}
+
+	.filter-section {
+		flex-direction: column;
+		margin-bottom: 127px;
+		.MuiFormControl-root {
+			margin: 0 auto 0 0 !important;
+			// z-index: 3000 !important;
+		}
+
+		.MuiFormControl-root:nth-child(1) {
+			margin-bottom: 16px !important;
+		}
+		.MuiFormControl-root:nth-child(2) {
+			margin-bottom: 32px !important;
+		}
+	}
+}

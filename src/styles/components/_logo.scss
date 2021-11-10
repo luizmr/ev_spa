@@ -1,0 +1,25 @@
+.logo {
+	background-color: $secondary-bg-color;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 175px;
+	height: 49px;
+	border: 1px solid #777777;
+	box-sizing: border-box;
+	border-radius: 4px;
+	p {
+		font-style: normal;
+		font-weight: 800;
+		font-size: 16px;
+		line-height: 158%;
+		color: $black;
+	}
+}
+
+@media screen and (max-width: $mobile-1) {
+	.logo {
+		display: none;
+	}
+}

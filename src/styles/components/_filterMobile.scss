@@ -1,0 +1,52 @@
+.filter-mobile {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2000;
+	background-color: $white;
+	padding: 24px;
+	box-sizing: border-box;
+
+	.filter-mobile__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 41px;
+
+		p {
+			color: $black;
+			text-transform: uppercase;
+			font-weight: 500;
+		}
+
+		svg {
+			color: $black;
+		}
+	}
+
+	.filter-mobile__buttons {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+}
+
+.filter-mobile-open {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.3);
+	display: block;
+	z-index: 2000;
+}
+
+.filter-mobile-close {
+	display: none;
+}
+
+.MuiModal-root {
+	z-index: 3000 !important;
+}
