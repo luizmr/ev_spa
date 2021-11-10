@@ -14,7 +14,6 @@ type Props = {
 
 const SnackbarComponent = ({ cart }: Props) => {
 	const [openSnackbar, setOpenSnackbar] = useState<boolean>(false);
-	const [counter, setCounter] = useState<number>(0);
 
 	const handleCloseSnackbar = () => {
 		setOpenSnackbar(false);
