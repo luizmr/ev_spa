@@ -59,7 +59,9 @@ const HomePage = () => {
 		setLoading(true);
 		fetch('https://graphql.datocms.com/', {
 			credentials: 'omit',
-			headers: { Authorization: `Bearer 857a03b1f2c6c379f889ddcbe0d870` },
+			headers: {
+				Authorization: `Bearer ${process.env.REACT_APP_DATOCMS_KEY}`,
+			},
 			body: JSON.stringify({
 				query: HOMEPAGE_QUERY,
 				variables: {

@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from 'pages/HomePage';
+import { JSXElementConstructor, ReactElement } from 'react';
 
 const routeOptions = [
 	{
@@ -12,7 +13,7 @@ const routeOptions = [
 interface RouteInterface {
 	key: string;
 	path: string;
-	Component: any;
+	Component: ReactElement<any, string | JSXElementConstructor<any>>;
 }
 
 export const AppRoutes = () => {

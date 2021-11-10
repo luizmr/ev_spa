@@ -14,18 +14,21 @@ type Props = {
 
 const SnackbarComponent = ({ cart }: Props) => {
 	const [openSnackbar, setOpenSnackbar] = useState<boolean>(false);
+	const [counter, setCounter] = useState<number>(0);
 
 	const handleCloseSnackbar = () => {
 		setOpenSnackbar(false);
 	};
 
 	useEffect(() => {
+		let timer: ReturnType<typeof setTimeout>;
 		if (cart.length) {
 			setOpenSnackbar(true);
-			setTimeout(() => {
+			timer = setTimeout(() => {
 				handleCloseSnackbar();
 			}, 2000);
 		}
+		return () => clearTimeout(timer);
 	}, [cart]);
 
 	return (

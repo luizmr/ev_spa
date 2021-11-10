@@ -14,10 +14,12 @@ type Props = {
 const Searchbox = ({ handleSearch }: Props) => {
 	const [searchboxString, setSearchboxString] = useState<string>('');
 
-	const handleChangeSearchboxString = (event: any) => {
+	const handleChangeSearchboxString = (
+		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+	) => {
 		const {
 			target: { value },
-		} = event;
+		} = e;
 		setSearchboxString(value);
 	};
 

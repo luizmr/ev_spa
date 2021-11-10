@@ -14,7 +14,10 @@ import { CartProduct, Product } from 'models/product';
 type Props = {
 	product: Product;
 	cart: Array<CartProduct>;
-	addToCart: any;
+	addToCart: (item: CartProduct) => {
+		type: string;
+		payload: { item: CartProduct };
+	};
 };
 
 const ProductCard = ({ product, cart, addToCart }: Props) => {

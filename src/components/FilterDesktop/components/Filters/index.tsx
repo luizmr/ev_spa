@@ -26,10 +26,12 @@ const Filters = ({
 	const [maxValue, setMaxValue] = useState<string>('');
 	const [ratingValue, setRatingValue] = useState<string>('0');
 
-	const handleChangeMin = (event: any) => {
+	const handleChangeMin = (
+		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+	) => {
 		const {
 			target: { value },
-		} = event;
+		} = e;
 		setMinValue(`${value}`);
 		handleChangePriceRange({
 			gte: value.length > 0 ? value : '0',
@@ -37,10 +39,12 @@ const Filters = ({
 		});
 	};
 
-	const handleChangeMax = (event: any) => {
+	const handleChangeMax = (
+		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+	) => {
 		const {
 			target: { value },
-		} = event;
+		} = e;
 		setMaxValue(`${value}`);
 		handleChangePriceRange({
 			gte: minValue.length > 0 ? minValue : '0',
@@ -48,10 +52,10 @@ const Filters = ({
 		});
 	};
 
-	const handleChangeRatingValue = (event: any) => {
+	const handleChangeRatingValue = (e: any) => {
 		const {
 			target: { value },
-		} = event;
+		} = e;
 		setRatingValue(`${value}`);
 		setRating(value);
 	};
